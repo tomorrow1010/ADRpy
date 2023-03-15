@@ -1,0 +1,14 @@
+from ADRpy import airworthiness as aw
+from ADRpy import unitconversions as co
+from ADRpy import atmospheres as at
+designbrief = {}
+designdef = {'aspectratio': 9.5, 'wingarea_m2': 442.9, 'weight_n': 2776230}
+designperf = {'CLmaxclean': 2.9, 'CLminclean': -1, 'CLslope': 14.9}
+designpropulsion = "jet"
+designatm = at.Atmosphere()
+csbrief={'cruisespeed_keas': 487.4, 'divespeed_keas': 510.4,
+         'altitude_m': 10668,
+         'weightfraction': 1, 'certcat': 'comm'}
+				 
+concept = aw.CertificationSpecifications(designbrief, designdef, designperf, designatm, designpropulsion, csbrief)
+points = concept.flightenvelope(textsize=15, figsize_in=[15, 10], show=True)
