@@ -554,7 +554,7 @@ class CertificationSpecifications:
 
             designatm = at.Atmosphere() # set the design atmosphere to a zero-offset ISA
     
-            csbrief={'cruisespeed_keas': 107, 'divespeed_keas': 150,
+            csbrief={'cruisespeed_keas': 487, 'divespeed_keas': 510,
             'altitude_m': 0,
             'weightfraction': 1, 'certcat': 'norm'}
 
